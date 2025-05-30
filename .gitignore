@@ -21,6 +21,7 @@ OVMF_CODE_4M.fd
 OVMF_VARS_4M.fd
 QEMU_EFI.fd
 esp/
+output/
 
 
 *.img
