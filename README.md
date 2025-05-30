@@ -2,18 +2,37 @@
 
 https://rust-osdev.github.io/uefi-rs/
 
+
+
+
 ## Build
+
+```sh
+cargo build
+cargo build --release
+```
 
 ```sh
 cargo build --target x86_64-unknown-uefi
 cargo build --target aarch64-unknown-uefi
 ```
+
+## Debug
+
+```sh
+cargo run
+```
+
+```sh
+cargo run --release
+```
+
 ## Setup BOOT DIR
 
 ```sh
 mkdir -p esp/EFI/BOOT
-cp target/x86_64-unknown-uefi/debug/nyan.efi esp/EFI/BOOT/BOOTX64.EFI
-cp target/aarch64-unknown-uefi/debug/nyan.efi esp/EFI/BOOT/BOOTAA64.EFI
+cp target/x86_64-unknown-uefi/release/nyan.efi esp/EFI/BOOT/BOOTX64.EFI
+cp target/aarch64-unknown-uefi/release/nyan.efi esp/EFI/BOOT/BOOTAA64.EFI
 ```
 
 ## Setup QEMU
