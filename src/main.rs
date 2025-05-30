@@ -36,7 +36,7 @@ fn main() -> Status {
         stdout.set_color(Black, background)?;
 
         info!("31 May 2025",);
-        info!("Developed by Huzaifa Irfan",);
+        info!("Developed by Huzaifa Irfan");
 
         for (i, mode) in stdout.modes().enumerate() {
             info!(
@@ -53,9 +53,9 @@ fn main() -> Status {
             for frame in FRAMES {
                 let mut prev_color = frame[0][0];
 
-                for (i, row) in frame[..frame.len() - 1].iter().enumerate() {
+                for (i, row) in frame.iter().enumerate() {
                     stdout.set_cursor_position(0, i)?;
-                    for color in row {
+                    for color in row[..row.len() - 1].iter() {
                         if (prev_color as usize) != (*color as usize) {
                             prev_color = *color;
                             stdout.set_color(prev_color, background)?;
