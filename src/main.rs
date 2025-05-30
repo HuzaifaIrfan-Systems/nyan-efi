@@ -11,12 +11,11 @@ mod nyan;
 fn main() -> Status {
     uefi::helpers::init().unwrap();
     let blockelement_full_block = uefi::CString16::try_from("█").unwrap();
-    let new_line = uefi::CString16::try_from("\n").unwrap();
     let background = Blue;
     system::with_stdout(|stdout| -> uefi::Result {
         stdout.set_color(Black, background)?;
 
-        let mode = stdout.modes().nth(0).unwrap();
+        let mode = stdout.modes().nth(1).unwrap();
 
         stdout.set_mode(mode)?;
 
@@ -33,20 +32,18 @@ fn main() -> Status {
 
         loop {
             for frame in nyan::FRAMES {
-                stdout.set_cursor_position(0, 0)?;
-
                 let mut prev_color = frame[0][0];
 
-                for row in frame {
+                for (i, row) in frame.iter().enumerate() {
+                    stdout.set_cursor_position(0, i)?;
                     for color in row {
-                        if (prev_color as usize) != (color as usize) {
-                            prev_color = color;
+                        if (prev_color as usize) != (*color as usize) {
+                            prev_color = *color;
                             stdout.set_color(prev_color, background)?;
                         }
 
                         stdout.output_string(&blockelement_full_block)?;
                     }
-                    stdout.output_string(&new_line)?;
                 }
 
                 boot::stall(70_000);
