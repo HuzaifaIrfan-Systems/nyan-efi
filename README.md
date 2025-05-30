@@ -3,25 +3,14 @@
 https://rust-osdev.github.io/uefi-rs/
 
 
-
-
 ## Build
 
 ```sh
-cargo build
-cargo build --release
-```
-
-```sh
-cargo build --target x86_64-unknown-uefi
-cargo build --target aarch64-unknown-uefi
+cargo build --target x86_64-unknown-uefi --release
+cargo build --target aarch64-unknown-uefi --release
 ```
 
 ## Debug
-
-```sh
-cargo run
-```
 
 ```sh
 cargo run --release
@@ -79,20 +68,6 @@ chainloader /EFI/nyan/BOOTX64.EFI
 
 ```sh
 sudo update-grub
-```
-
-## Make img file 
-
-```sh
-dd if=/dev/zero of=nyan.img bs=1M count=64
-mkfs.vfat -F32 nyan.img
-```
-
-```sh
-mkdir -p mnt
-sudo mount nyan.img mnt
-sudo cp -r esp/* mnt/
-sudo umount mnt
 ```
 
 ## Make Boot img file 
