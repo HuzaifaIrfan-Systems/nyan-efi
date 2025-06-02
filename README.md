@@ -5,14 +5,16 @@
   <p><h3 align="center">UEFI Boot to Nyan Cat 🚀</h3></p>
 </div>
 
-https://www.youtube.com/watch?v=cHK-yvoZUPw
-•
 https://rust-osdev.github.io/uefi-rs/
 •
 https://github.com/diekmann/uefi_nyan_80x25
 
 <hr>
 
+
+## Demo Video
+
+[![Demo Video](https://img.youtube.com/vi/cHK-yvoZUPw/0.jpg)](https://www.youtube.com/watch?v=cHK-yvoZUPw)
 
 
 ## Build
