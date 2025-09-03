@@ -1,21 +1,16 @@
-<br />
-
 <div align="center">
   <h1>NYAN EFI</h1>
   <p><h3 align="center">UEFI Boot to Nyan Cat 🚀</h3></p>
 </div>
 
-https://rust-osdev.github.io/uefi-rs/
-•
-https://github.com/diekmann/uefi_nyan_80x25
-
 <hr>
 
+## 🎬 Demo
 
-## Demo Video
+[▶️![Demo](https://img.youtube.com/vi/cHK-yvoZUPw/maxresdefault.jpg)](https://www.youtube.com/watch?v=cHK-yvoZUPw)
 
-[![Demo Video](https://img.youtube.com/vi/cHK-yvoZUPw/0.jpg)](https://www.youtube.com/watch?v=cHK-yvoZUPw)
 
+# 🛠️ Development
 
 ## Build
 
@@ -46,6 +41,8 @@ cp /usr/share/OVMF/OVMF_CODE_4M.fd .
 cp /usr/share/OVMF/OVMF_VARS_4M.fd .
 cp /usr/share/qemu-efi-aarch64/QEMU_EFI.fd .
 ```
+# 🚀 Usage
+
 
 ## Run on QEMU
 
@@ -151,15 +148,21 @@ qemu-system-x86_64 -enable-kvm \
 ```
 
 
-## 🤝🏻 &nbsp;Connect with Me
 
-<p align="center">
-<a href="https://www.huzaifairfan.com"><img src="https://img.shields.io/badge/-huzaifairfan.com-1aa260?style=flat&logo=Google-Chrome&logoColor=white"/></a>
-<a href="https://github.com/HuzaifaIrfan/"><img src="https://img.shields.io/badge/-Github-4078c0?style=flat&logo=Github&logoColor=white"/></a>
-<a href="mailto:contact@huzaifairfan.com"><img src="https://img.shields.io/badge/-contact@huzaifairfan.com-c71610?style=flat&logo=Gmail&logoColor=white"/></a>
-<a href="https://www.upwork.com/freelancers/huzaifairfan2001"><img src="https://img.shields.io/badge/-Upwork-14a800?style=flat&logo=Upwork&logoColor=white"/></a>
-</p>
 
-## License
+# 📝 Documentation
 
-Licensed under the MIT License, Copyright 2025 Huzaifa Irfan. [LICENSE](LICENSE)
+# 📚 References
+- https://rust-osdev.github.io/uefi-rs/
+- https://github.com/diekmann/uefi_nyan_80x25
+
+
+# 🤝🏻 Connect with Me
+
+[![GitHub](https://img.shields.io/badge/Github-%23222.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HuzaifaIrfan/)
+[![Website](https://img.shields.io/badge/Website-%23222.svg?style=for-the-badge&logo=google-chrome&logoColor==%234285F4)](https://www.huzaifairfan.com)
+
+# 📜 License
+
+Licensed under the GPL3 License, Copyright 2025 Huzaifa Irfan. [LICENSE](LICENSE)
+
